@@ -1,0 +1,31 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-wazframe-box.invert {
+  	color: var(--color-light);
+  	background-color: var(--color-dark);
+}
+
+wf-box {
+  --scale-1: 1.5rem;
+  --color-light: var(--wp--preset--color--background, #fff);
+  --color-dark: var(--wp--preset--color--foreground, #292825);
+  display: block;
+  /* without box-sizing, it will default to content-box in WP */
+  box-sizing: border-box;
+  padding: var(--scale-1);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  border-width: var(--border-thin);
+  /* ↓ For high contrast mode */
+  outline: var(--border-thin) solid transparent;
+  outline-offset: calc(var(--border-thin) * -1);
+}
+
+wf-box * {
+  color: inherit;
+}

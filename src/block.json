@@ -1,0 +1,53 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "wazframe/box",
+	"version": "0.1.0",
+	"title": "Box",
+	"category": "design",
+	"icon": "grid-view",
+	"description": "Box layout primitive",
+  	"attributes": {
+		"invert": {
+		  "type": "boolean",
+		  "default": false
+		},
+	  	"padding": {
+		  "type": "string",
+		  "default": "var(--scale-1)"
+		}
+	},
+	"supports": {
+		"html": false,
+	  	"anchor": true,
+	  	"spacing": {
+		  	"padding": true,
+		  	"__experimentalDefaultControls": {
+			  "padding": true
+			}
+		},
+	  	"color": {
+			"gradients": true,
+			"__experimentalDefaultControls": {
+		  		"background": true,
+		  		"text": true
+			}
+	  	},
+	  	"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+		  	"__experimentalDefaultControls": {
+			  	"color": true,
+			  	"radius": true,
+			  	"style": true,
+			  	"width": true
+			}
+		}
+	},
+	"textdomain": "wf-box",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
